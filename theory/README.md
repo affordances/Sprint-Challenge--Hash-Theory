@@ -8,13 +8,13 @@ both `antelope` and `antelopes`.)
 * Single regex that matches either of these:
 
     antelope rocks out
-    
+
     antelopes rock out
 
 * Regex that matches either of:
 
     goat
-    
+
     moat
 
   but not:
@@ -26,11 +26,11 @@ both `antelope` and `antelopes`.)
   is correct (e.g 3333-33-33 can match).
 
   2000-10-12
-  
+
   1999-1-20
-  
+
   1999-01-20
-  
+
   812-2-10
 
 ## State Machines
@@ -43,7 +43,7 @@ both `antelope` and `antelopes`.)
       ab*c+d?[ef]
 
   Remember the ε transition can be used to move between states without
-  consuming input. 
+  consuming input.
 
 * A lion can be sleeping, eating, hunting, or preening. Draw a state
   machine diagram for the lion and label the transition events that
@@ -54,11 +54,11 @@ both `antelope` and `antelopes`.)
   ESC character (ASCII 27), it goes into a special mode where it looks
   for commands to change its behavior. For example:
 
-      ESC[12;45f
+      ESC[12;45f - `/\e\[\d+\;\d+f/`
 
   moves the cursor to line 12, column 45.
 
-      ESC[1m
+      ESC[1m - `/\e\[1m/`
 
   changes the font to bold.
 
